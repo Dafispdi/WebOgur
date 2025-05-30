@@ -25,6 +25,21 @@
         <p id="userMessage"></p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Di bagian akhir sebelum </body> -->
+<script>
+  function checkLogin() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const loginMessage = document.getElementById("loginMessage");
+
+    if (username === "admin" && password === "cpanelreseller") {
+      document.getElementById("loginContainer").classList.add("hidden");
+      document.getElementById("dataContainer").classList.remove("hidden");
+      loginMessage.innerText = "";
+    } else {
+      loginMessage.innerText = "❌ Username atau password salah!";
+    }
+  }
+</script>
 </body>
 </html>
